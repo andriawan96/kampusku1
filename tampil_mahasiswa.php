@@ -18,7 +18,7 @@
   //berasal dari form pencarian, siapkan query
   if(isset($_GET["submit"])){
     //ambil nilai nama
-    $nama = htmlentities(strip_tags(trims($_GET['nama'])));
+    $nama = htmlentities(strip_tags(trim($_GET["nama"])));
 
     //filter untuk $nama untuk mencegah sql injection
     $nama = mysqli_real_escape_string($link,$nama);
