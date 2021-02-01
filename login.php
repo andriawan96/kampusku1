@@ -26,7 +26,7 @@
     }
 
     //include file connection.php
-    include('connection.php');
+    include("connection.php");
 
     //filter dengan mysqli_real_escape_string
     $username = mysqli_real_escape_string($link,$username);
@@ -71,7 +71,16 @@ if($pesan_error == ""){
      <title>SISTEM INFORMASI MAHASISWA</title>
      <link rel="icon" href="icon1.PNG" type="image/png">
      <style media="screen">
-
+        body{
+          background-color: #F8F8F8;
+        }
+        div.container {
+          width: 380px;
+          padding: 10px 50px 80px;
+          background-color: white;
+          margin: 20px auto;
+          box-shadow: 1px 0px 10px, -1px 0px 10px;
+        }
      </style>
    </head>
    <body>
@@ -89,6 +98,23 @@ if($pesan_error == ""){
             echo "<div class=\"error\">$pesan_error</div>";
           }
         ?>
+        <form class="" action="login.php" method="post">
+          <fieldset>
+            <legend>Login</legend>
+            <p>
+                <label for="username">Username :</label>
+                <input type="text" name="username" id="username" value="<?php echo $username?>">
+            </p>
+            <p>
+                <label for="password">Password : </label>
+                <input type="password" name="password" id="password"
+                value="<?php echo $username ?>">
+            </p>
+            <p>
+                <input type="submit" name="submit" value="Log In">
+            </p>
+          </fieldset>
+        </form>
 
      </div>
    </body>
