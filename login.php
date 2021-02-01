@@ -81,6 +81,32 @@ if($pesan_error == ""){
           margin: 20px auto;
           box-shadow: 1px 0px 10px, -1px 0px 10px;
         }
+        h1,h3 {
+          text-align: center;
+          font-family: Cambria, "times new roman", serif;
+        }
+        p{
+          margin:0;
+        }
+        fieldset{
+          padding:20px;
+          width: 215px;
+          margin: auto;
+        }
+        input{
+          margin-bottom:10px;
+        }
+        input[type=text],input[type=password]{
+          width:120px;
+        }
+        input[type=submit]{
+          float:right;
+        }
+        label {
+          width:80px;
+          float: left;
+          margin-right:10px;
+        }
      </style>
    </head>
    <body>
